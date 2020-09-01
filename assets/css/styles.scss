@@ -45,8 +45,18 @@ h6 {
   color: #ffffff;
 }
 
+header {
+  height: 20em;
+  background-image: url(../img/geoawareness-banner.png); 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .main-content {
   word-wrap: normal;
-  margin: 5em;
+  margin: auto;
   max-width: 80rem;
+  padding: 5em 5em;
 }
