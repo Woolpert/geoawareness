@@ -7,17 +7,17 @@ title: Runbook
 
 The GeoAwareness system consists of four primary components. Here is a description of each.
 
-- [Geofencing service](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-geofencing)
+- [Geofencing service](https://github.com/woolpert/geoawareness-geofencing)
 
   - Listens for telemetry event messages in the geoawareness-ingest Pub/Sub topic.
   - Intersects events against geofence polygons stored in Datastore.
   - Writes the results to Order and Event documents in Datastore.
 
-- [REST API](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-api) - Provides access to the Geoawareness data model and telemetry event ingest services.
+- [REST API](https://github.com/woolpert/geoawareness-api) - Provides access to the Geoawareness data model and telemetry event ingest services.
 
-- [Order Monitor](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-order-monitor) - Website consisting of a near real-time dashboard of customer locations along with their ETAs. The dashboard includes both a map and order queue.
+- [Order Monitor](https://github.com/woolpert/geoawareness-order-monitor) - Website consisting of a near real-time dashboard of customer locations along with their ETAs. The dashboard includes both a map and order queue.
 
-- [Mobile Tracker](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-mobile-tracker) - Mobile website that emulates the customer experience for placing an order and tracking location as the customer progresses towards the store.
+- [Mobile Tracker](https://github.com/woolpert/geoawareness-mobile-tracker) - Mobile website that emulates the customer experience for placing an order and tracking location as the customer progresses towards the store.
 
 The Geofencing service and REST API are backend components while Order Monitor and Mobile Tracker are frontend components. Both frontend components are example integrations. Each component resides in its own repository.
 
@@ -55,11 +55,11 @@ Decide on a project id, region, and zone.
 
 Follow the instructions provided in the individual READMEs included with each repository. We recommend standing up each component in the following order:
 
-1. [Geofencing service](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-geofencing)
+1. [Geofencing service](https://github.com/woolpert/geoawareness-geofencing)
    - be sure the smoke test passes before proceeding
-1. [REST API](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-api)
-1. [Order Monitor](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-order-monitor)
-1. [Mobile Tracker](https://github.com/woolpert/cloud/demos/geoawareness/geoawareness-mobile-tracker)
+1. [REST API](https://github.com/woolpert/geoawareness-api)
+1. [Order Monitor](https://github.com/woolpert/geoawareness-order-monitor)
+1. [Mobile Tracker](https://github.com/woolpert/geoawareness-mobile-tracker)
 
 ---
 
