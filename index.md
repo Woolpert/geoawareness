@@ -49,6 +49,14 @@ Decide on a project id, region, and zone.
 
     export GCP_ZONE=<YOUR_GCP_ZONE>
     gcloud config set compute/zone $GCP_ZONE
+
+    # Create VPC network
+    gcloud compute networks create geoawareness --subnet-mode=custom
+
+    # Create subnet
+    gcloud compute networks subnets create geoawareness-$GCP_REGION \
+        --network=geoawareness --region=$GCP_REGION --range=10.0.0.0/24 --enable-private-ip-google-access
+
 ```
 
 ### Deploy components
@@ -56,7 +64,9 @@ Decide on a project id, region, and zone.
 Follow the instructions provided in the individual READMEs included with each repository. We recommend standing up each component in the following order:
 
 1. [Geofencing service](https://github.com/woolpert/geoawareness-geofencing)
-   - be sure the smoke test passes before proceeding
+   - be sure to leave the database in a state that is properly seeded for the demo. `node demo/seed_repository.js`
+   - be sure the smoke tests pass before proceeding
+
 1. [REST API](https://github.com/woolpert/geoawareness-api)
 1. [Order Monitor](https://github.com/woolpert/geoawareness-order-monitor)
 1. [Mobile Tracker](https://github.com/woolpert/geoawareness-mobile-tracker)
